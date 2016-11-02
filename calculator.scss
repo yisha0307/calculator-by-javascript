@@ -1,0 +1,68 @@
+
+@import url('https://fonts.googleapis.com/css?family=Josefin+Slab');
+@import "compass";
+@import "compass/css3";
+
+//colors
+$gold: #CDB380; //先定义一些颜色
+$cloud: #5E6F8C;
+$purp: #542437;
+$black: #343838;
+$transBlack: rgba(0, 0, 0, 0.3);
+$cloud: #5E6F8C;
+//width
+$buttonSize:65px;
+
+body{margin:0;
+	padding:0;
+	font-family: 'Josefin Slab', serif;
+	font-size:20px;
+  height:100vh; //100vh就是占满整个视图的height，但为什么不写width？
+  @include background(linear-gradient(to right bottom,$purp 0%, $gold)100% no-repeat);
+  color:$gold;
+  #calc{
+  	text-align:center;
+  	width:4.5*$buttonSize; //改成4个button的宽度
+  	height:6*$buttonSize; //改成6行的高度
+  	@include background($black);
+  	@include box-shadow(0 0 $buttonSize 0 darken($transBlack,0.5));
+  	margin:20vh auto; //margin-top 要改一下
+  	.output{
+  		position:relative;
+  		right:0.5*$buttonSize;
+  		top:0.4*$buttonSize;
+  		height:$buttonSize;		
+  		text-align: right;
+  		color:lighten($gold, .5);
+  		font-size:1.2em;
+  		
+  	}
+  	// .secondLine{
+  	// 	display: inline-block;
+  	// }
+  	span{
+  	display:inline-block; //span是行内元素，没有height和width，要改成inline-block
+		cursor: pointer;
+  		width:$buttonSize;
+  		height: $buttonSize;
+  		&:hover{
+  			color:$cloud;
+  			@include text-shadow(0 0 3px $cloud);
+  		}}
+  		.zero {width: 3*$buttonSize+12px;} //可以直接在sass里写运算
+  	 .firstLine{
+  	 	padding-top:0.3*$buttonSize;
+  	 border:{
+  			top:2px solid;
+  			color:$cloud;
+  		}}
+  	// .thirdLine{
+  	// 	display: inline-block;
+  	// }.forthLine{
+  	// 	display: inline-block;
+  	// }.fifthLine{
+  	// 	display: inline-block;
+  	// }
+  }} //linear-gradient 的定义要看一下
+
+
