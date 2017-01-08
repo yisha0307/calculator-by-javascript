@@ -1,0 +1,70 @@
+@import 'compass';
+@import "compass/css3";
+@import '//fonts.googleapis.com/css?family=Roboto+Mono';
+
+$bg-red: #ff5572;
+$bg-orange: #ff7555;
+$bg-black: #404040;
+$white:#fff;
+$perl-pink:#ffbcc5;
+$button-size: 80px;
+
+*{
+	box-sizing:border-box;
+}
+
+html,body{
+	min-height: 100%;
+	background:linear-gradient(45deg, $bg-red, $bg-orange);
+	font-family: 'Roboto Mono',sans-serif;
+}
+
+.calculator{
+	position: absolute;
+	left:50%;
+	top:50%;
+	transform:translate(-50%,-50%);
+	width:4* $button-size;
+	height:480px;
+	background-color: $bg-black;
+	box-shadow: 0 0 20px $bg-black;
+}
+
+.calc-display{
+	width:100%;
+	height:$button-size;
+	color:$perl-pink;
+	line-height: $button-size;
+	text-align: right;
+	padding:0 15px;
+	font-size:20px;
+	border-bottom: 3px solid $bg-red;
+}
+button{
+	border-style:none;
+	background-color:$bg-black;
+	color:$white;
+	width:$button-size;
+	height: $button-size;
+	font-size:16px;
+	cursor:pointer;
+	outline: 0;
+	transition: 0.5s;
+	&:hover{
+		color:$perl-pink;
+		text-shadow:0 0 2px $perl-pink;
+	}
+}
+.calc-oper{
+	position: absolute;
+	left: $button-size * 3;
+	top: $button-size;
+}
+.calc-numbers{
+	width: 3 * $button-size;
+	button:last-child{
+		position: absolute;
+		left: $button-size;
+		top: 5 * $button-size;
+	}
+}

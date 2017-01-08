@@ -1,0 +1,72 @@
+@import "//fonts.googleapis.com/css?family=Roboto+Mono";
+/* line 12, ../sass/calculator.scss */
+* {
+  box-sizing: border-box;
+}
+
+/* line 16, ../sass/calculator.scss */
+html, body {
+  min-height: 100%;
+  background: linear-gradient(45deg, #ff5572, #ff7555);
+  font-family: 'Roboto Mono',sans-serif;
+}
+
+/* line 22, ../sass/calculator.scss */
+.calculator {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 320px;
+  height: 480px;
+  background-color: #404040;
+  box-shadow: 0 0 20px #404040;
+}
+
+/* line 33, ../sass/calculator.scss */
+.calc-display {
+  width: 100%;
+  height: 80px;
+  color: #ffbcc5;
+  line-height: 80px;
+  text-align: right;
+  padding: 0 15px;
+  font-size: 20px;
+  border-bottom: 3px solid #ff5572;
+}
+
+/* line 43, ../sass/calculator.scss */
+button {
+  border-style: none;
+  background-color: #404040;
+  color: #fff;
+  width: 80px;
+  height: 80px;
+  font-size: 16px;
+  cursor: pointer;
+  outline: 0;
+  transition: 0.5s;
+}
+/* line 53, ../sass/calculator.scss */
+button:hover {
+  color: #ffbcc5;
+  text-shadow: 0 0 2px #ffbcc5;
+}
+
+/* line 58, ../sass/calculator.scss */
+.calc-oper {
+  position: absolute;
+  left: 240px;
+  top: 80px;
+}
+
+/* line 63, ../sass/calculator.scss */
+.calc-numbers {
+  width: 240px;
+}
+/* line 65, ../sass/calculator.scss */
+.calc-numbers button:last-child {
+  position: absolute;
+  left: 80px;
+  top: 400px;
+}
